@@ -1,0 +1,15 @@
+{
+  "name": "my-project",
+  "version": "0.0.1",
+  "description": "Credit card checker",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Andrei Siarheyenka",
+  "license": "none",
+  "dependencies": {
+
+  }
+}
