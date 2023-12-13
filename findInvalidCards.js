@@ -1,7 +1,7 @@
-import validateCard from "./validateCard";
+const validateCard = require('./validateCard.js');
 
 const findInvalidCards = (nestedArray) => {
     return nestedArray.filter(card => !validateCard(card));
 }
 
-export default findInvalidCards;
+module.exports = findInvalidCards;
