@@ -28,7 +28,7 @@ describe(
 
         testCases.forEach( testCase => {
             test (
-                `input: ${testCase.input}, output: ${stringToArray(testCase.input)}, expected: ${testCase.expected}`,
+                `received: ${testCase.input}, returned: ${stringToArray(testCase.input)}, expected: ${testCase.expected}`,
                 () => {
                     const result = stringToArray(testCase.input);
                     expect(result).toEqual(testCase.expected);
