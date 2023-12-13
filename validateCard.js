@@ -4,7 +4,7 @@ const luhnDouble = (num) => {
 }
 
 const validateCard = (array) => {
-    if (array.length !== 16) return false;
+    if (array.length < 13 || array.length > 16) return false;
 
     let isDoubled = false;
     let numSum = 0;
@@ -19,4 +19,4 @@ const validateCard = (array) => {
     return numSum % 10 === 0;
 }
 
-export default validateCard;
+module.exports = validateCard;
