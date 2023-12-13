@@ -1,6 +1,5 @@
-import validateCard from "./validateCard";
-import findInvalidCards from "./findInvalidCards";
-import idInValidCards from "./idInValidCards";
+const luhnSum = require('./functions/luhnSum');
+const stringToArray = require('./functions/stringToArray');
 
 // All valid credit card numbers
 const valid1 = [4, 5, 3, 9, 6, 7, 7, 9, 0, 8, 0, 1, 6, 8, 0, 8]
@@ -28,26 +27,26 @@ const mystery6 = [4, 5, 3, 9, 4, 0, 4, 9, 6, 7, 8, 6, 9, 6, 6, 6, 1, 8];
 const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, invalid3, invalid4, invalid5, mystery1, mystery2, mystery3, mystery4, mystery5, mystery5]
 
 
-// TESTS FOR validateCard:
-console.log(`validateCard(invalid1): ${validateCard(invalid1)}`); // should return false
-console.log(`validateCard(valid1): ${validateCard(valid1)}`); // should return true
-console.log(`validateCard(mystery6): ${validateCard(mystery6)}`); // should return false
-
-
-
-// TESTS FOR findInvalidCards:
-console.log(`findInvalidCards([valid1, invalid3, valid2]): ${findInvalidCards([valid1, invalid3, valid2])}`); //should return [invalid3]
-
-
-
-// TESTS FOR idInValidCards:
-console.log(`idInvalidCards([invalid1, invalid2, invalid3]): ${idInValidCards([invalid1, invalid2, invalid3])}`); //should return ['Amex', 'Mastercard', 'Visa']
-console.log(`idInvalidCards([valid1, valid2, valid3]): ${idInValidCards([valid1, valid2, valid3, valid4, valid5])}`); //should return []
-console.log(`idInvalidCards([mystery1, mystery2, mystery3, mystery4, mystery5]): ${idInValidCards([mystery1, mystery2, mystery3, mystery4, mystery5])}`); //should return ['Mastercard', 'Visa']
+// // TESTS FOR validateCard:
+// console.log(`validateCard(invalid1): ${validateCard(invalid1)}`); // should return false
+// console.log(`validateCard(valid1): ${validateCard(valid1)}`); // should return true
+// console.log(`validateCard(mystery6): ${validateCard(mystery6)}`); // should return false
+//
+//
+//
+// // TESTS FOR findInvalidCards:
+// console.log(`findInvalidCards([valid1, invalid3, valid2]): ${findInvalidCards([valid1, invalid3, valid2])}`); //should return [invalid3]
+//
+//
+//
+// // TESTS FOR idInValidCards:
+// console.log(`idInvalidCards([invalid1, invalid2, invalid3]): ${idInValidCards([invalid1, invalid2, invalid3])}`); //should return ['Amex', 'Mastercard', 'Visa']
+// console.log(`idInvalidCards([valid1, valid2, valid3]): ${idInValidCards([valid1, valid2, valid3, valid4, valid5])}`); //should return []
+// console.log(`idInvalidCards([mystery1, mystery2, mystery3, mystery4, mystery5]): ${idInValidCards([mystery1, mystery2, mystery3, mystery4, mystery5])}`); //should return ['Mastercard', 'Visa']
 
 
 // console.log(findInvalidCards(batch));
-
+ console.log(luhnSum(stringToArray('521005105105105105')));
 
 
 

@@ -1,4 +1,4 @@
-const stringToArray = require('../stringToArray.js');
+const stringToArray = require('../functions/stringToArray.js');
 
 describe(
     'String to Array Tests',
